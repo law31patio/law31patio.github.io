@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lytro光场相机-革命性光场摄影技术与全息成像设备评测</title>
+    <meta name="description" content="深入解析lytro光场相机的技术原理、全光函数应用及历史地位。提供设备参数对比、软件后期处理指南、成像效果样张展示及购买与使用建议。">
+    <meta name="keywords" content="lytro光场相机, 光场技术, 全息相机, 重新定义摄影, Lytro Illum, Lytro Light Field Camera">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2a2a2a;
+            --accent-color: #007aff;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: var(--spacing-unit);
+            color: var(--primary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.1);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Concept Section */
+        .concept {
+            padding: 60px 0;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .concept-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .concept-content p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        .concept-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .concept-list li::before {
+            content: "✓";
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .concept-image {
+            background: #e0e0e0;
+            border-radius: var(--border-radius);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .concept-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .concept-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Specs Comparison */
+        .specs {
+            background-color: white;
+            padding: 60px 0;
+        }
+
+        .specs-table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Interactive Demo Section */
+        .interactive-demo {
+            padding: 60px 0;
+            background-color: var(--bg-color);
+        }
+
+        .demo-container {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .focus-controls {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .range-slider {
+            width: 300px;
+            cursor: pointer;
+        }
+
+        .focus-info {
+            font-weight: 600;
+            color: var(--accent-color);
+            min-width: 100px;
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            padding: 60px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery-info {
+            padding: 15px;
+        }
+
+        .gallery-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .gallery-info p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        .faq-item.active .faq-question::before {
+            content: "+";
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            .concept-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .concept-image {
+                height: 300px;
+            }
+
+            .focus-controls {
+                flex-direction: column;
+            }
+            
+            .range-slider {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>✦</span> Lytro 灵动光场
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#concept">技术原理</a></li>
+                    <li><a href="#specs">设备参数</a></li>
+                    <li><a href="#gallery">成像样张</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#buy" class="cta-button">了解设备</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-tags">
+                    <span class="tag">全光函数</span>
+                    <span class="tag">实时对焦</span>
+                    <span class="tag">光场摄影</span>
+                </div>
+                <h1>重新定义摄影：<br>Lytro 光场相机</h1>
+                <p>告别对焦犹豫。捕捉整个场景的光线信息，拍摄后随心所欲地改变焦点与视角。探索光场技术的无限可能。</p>
+                <a href="#concept" class="cta-button" style="background: white; color: var(--primary-color);">探索核心技术</a>
+            </div>
+        </section>
+
+        <!-- Concept Section -->
+        <section id="concept" class="concept">
+            <div class="container">
+                <h2 class="section-title">什么是光场技术？</h2>
+                <p class="section-subtitle">传统相机只记录光线到达传感器上某一点的强度，而 Lytro 光场相机则记录了光线从场景中每一点发出的<strong>方向和强度</strong>。</p>
+                
+                <div class="concept-grid">
+                    <div class="concept-content">
+                        <h3>打破物理限制</h3>
+                        <p>传统的单反相机在按下快门的瞬间就已经确定了焦点。而光场相机捕捉了<strong>全光函数</strong> 的部分信息，允许用户在拍摄后的数分钟甚至数小时内，重新调整照片中哪个部分是清晰的。</p>
+                        <ul class="concept-list">
+                            <li><strong>重对焦：</strong> 在电脑上轻松调整焦点，无需重新拍摄。</li>
+                            <li><strong>变焦：</strong> 改变图像视角，产生景深变化效果。</li>
+                            <li><strong>深度信息：</strong> 获得场景的精确深度数据。</li>
+                        </ul>
+                    </div>
+                    <div class="concept-image">
+                        <!-- Using a generic tech/abstract placeholder -->
+                        <img src="https://picsum.photos/seed/lytro-tech/600/400" alt="光场相机技术示意图">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specs Section -->
+        <section id="specs" class="specs">
+            <div class="container">
+                <h2 class="section-title">设备参数对比</h2>
+                <p class="section-subtitle">了解 Lytro 系列核心设备的硬件规格与性能差异。</p>
+                
+                <div class="specs-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>特性</th>
+                                <th>Lytro Light Field Camera (2011)</th>
+                                <th>Lytro Illum (2014)</th>
+                                <th>对比</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>传感器尺寸</td>
+                                <td>约 11.4 x 8.6 mm</td>
+                                <td>约 40 x 27 mm</td>
+                                <td>Illum 提供更大的动态范围和画质</td>
+                            </tr>
+                            <tr>
+                                <td>像素数</td>
+                                <td>1100 万</td>
+                                <td>4000 万</td>
+                                <td>解析力提升近 4 倍</td>
+                            </tr>
+                            <tr>
+                                <td>对焦范围</td>
+                                <td>0.7m - 无穷远</td>
+                                <td>30cm - 无穷远</td>
+                                <td>Illum 支持近景微距拍摄</td>
+                            </tr>
+                            <tr>
+                                <td>存储格式</td>
+                                <td>PLF (Light Field File)</td>
+                                <td>PLF + JPG</td>
+                                <td>Illum 支持直接输出 JPEG</td>
+                            </tr>
+                            <tr>
+                                <td>价格区间</td>
+                                <td>历史 $399 - $499</td>
+                                <td>历史 $1500+</td>
+                                <td>设备较旧，二手市场为主</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo Section -->
+        <section class="interactive-demo">
+            <div class="container">
+                <div class="demo-container">
+                    <h2>体验光场效果</h2>
+                    <p>虽然无法在静态网页中直接运行复杂的全光函数渲染引擎，但您可以模拟理解焦点变化的过程。</p>
+                    
+                    <div class="focus-controls">
+                        <span>焦点调节</span>
+                        <input type="range" min="1" max="100" value="50" class="range-slider" id="focusSlider">
+                        <span class="focus-info" id="focusValue">50%</span>
+                    </div>
+                    
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 20px;">
+                        *注：此为视觉演示。真正的 Lytro 照片允许您在后期将背景虚化或让前景清晰，且不会损失画质。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2 class="section-title">成像样张展示</h2>
+                <p class="section-subtitle">展示 Lytro 光场相机在不同场景下的虚实变换能力。</p>
+                
+                <div class="gallery-grid">
+                    <article class="gallery-item">
+                        <img src="https://picsum.photos/seed/lytro-portrait/400/300" alt="人像光场样张">
+                        <div class="gallery-info">
+                            <h4>柔和人像</h4>
+                            <p>背景虚化效果自然，无需大光圈镜头。</p>
+                        </div>
+                    </article>
+                    
+                    <article class="gallery-item">
+                        <img src="https://picsum.photos/seed/lytro-scene/400/300" alt="风景光场样张">
+                        <div class="gallery-info">
+                            <h4>全景风景</h4>
+                            <p>同时捕捉前景与远景，后期可重对焦。</p>
+                        </div>
+                    </article>
+                    
+                    <article class="gallery-item">
+                        <img src="https://picsum.photos/seed/lytro-motion/400/300" alt="动态光场样张">
+                        <div class="gallery-info">
+                            <h4>运动捕捉</h4>
+                            <p>记录场景中运动物体的光场信息。</p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item">
+                        <img src="https://picsum.photos/seed/lytro-macro/400/300" alt="微距光场样张">
+                        <div class="gallery-info">
+                            <h4>微距特写</h4>
+                            <p>捕捉极近距离的景深变化细节。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">现在的手机摄影是否已经取代了光场相机？</div>
+                    <div class="faq-answer">
+                        <p>智能手机主要依靠软件算法（如多帧合成、景深模拟）来模拟景深效果，这通常需要多张照片合成，且在极端光线或快速运动下效果有限。Lytro 光场相机是物理上记录了光的方向，拥有真正的“拍摄后对焦”能力，且不依赖算法插值，画质更纯粹。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Lytro 相机现在还能买到新的吗？</div>
+                    <div class="faq-answer">
+                        <p>Lytro 公司已停止硬件研发。目前市面上主要是二手市场流通的 Lytro Illum 和早期版 Light Field Camera。建议在购买前确认设备电池健康状况及存储卡兼容性。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">如何处理 Lytro 的 .plf 文件？</div>
+                    <div class="faq-answer">
+                        <p>.plf 是专有格式，需要使用 Lytro Desktop 软件（支持 Windows 和 Mac）进行查看和渲染。渲染后的照片可以导出为标准 JPEG 或 TIFF 格式。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">光场技术对未来影像有什么影响？</div>
+                    <div class="faq-answer">
+                        <p>虽然消费级设备暂告一段落，但光场技术正逐步应用于工业检测、医疗成像和 AR/VR 视觉计算中，它是实现“全息显示”和精准三维视觉感知的重要基础。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2023 Lytro 光场摄影爱好者社区. 保留所有权利。</p>
+            <p>本站内容仅供技术交流与历史回顾，非 Lytro 官方授权。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的交互逻辑：焦点滑块模拟
+        const slider = document.getElementById('focusSlider');
+        const focusValue = document.getElementById('focusValue');
+        
+        slider.addEventListener('input', function() {
+            focusValue.textContent = this.value + '%';
+        });
+
+        // FAQ 手风琴效果
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // 关闭其他打开的项
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // 切换当前项
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+                                         </html>
