@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="M系汽车深度评测与购车指南：涵盖M Power高性能车型解析、宝马M系列驾驶体验、M Power改装方案及M车型选购建议。">
+    <meta name="keywords" content="m系, 宝马M系列, M Power, M3, M4, 宝马改装, 高性能轿车, 跑车评测">
+    <title>m系 - 宝马M Power高性能车型深度评测与选购指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0066b1; /* BMW Blue */
+            --secondary-color: #111111; /* BMW Black */
+            --accent-color: #e30613; /* M Sport Red */
+            --text-color: #333333;
+            --light-bg: #f4f4f4;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .view-all {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/mpower_hero/1920/600');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #c90510;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--secondary-color);
+        }
+
+        /* M-Models Grid */
+        .m-models {
+            padding: 4rem 0;
+        }
+
+        .model-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .model-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .model-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .model-image {
+            height: 200px;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+
+        .model-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .model-card:hover .model-image img {
+            transform: scale(1.05);
+        }
+
+        .model-info {
+            padding: 1.5rem;
+        }
+
+        .model-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .model-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .model-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .model-specs {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #555;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .spec-item strong {
+            display: block;
+            color: var(--secondary-color);
+        }
+
+        /* Performance Focus Section */
+        .performance-section {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 4rem 0;
+        }
+
+        .performance-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .perf-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .perf-text p {
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+
+        .perf-highlight {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-item h4 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-item span {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .perf-image {
+            position: relative;
+        }
+
+        .perf-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            padding: 4rem 0;
+        }
+
+        .guide-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .guide-item {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+        }
+
+        .guide-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .guide-item h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .guide-item p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: var(--light-bg);
+            padding: 4rem 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        summary {
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            position: relative;
+            padding-right: 3rem;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-content {
+            padding: 1.5rem;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #aaa;
+            padding: 3rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-wrap: wrap;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                order: 3;
+                padding-top: 1rem;
+            }
+
+            nav.open {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .performance-content {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-list {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">M<span>Power</span></a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#models" class="active">全系车型</a></li>
+                    <li><a href="#performance">驾驶性能</a></li>
+                    <li><a href="#guide">选购指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>驾驭极致性能<br>探索M系的灵魂</h1>
+                <p>从M3到M8，深入了解宝马M系列的高性能基因、改装潜力与驾驶哲学。为您提供专业的购车建议与用车体验分享。</p>
+                <div class="hero-btns">
+                    <a href="#models" class="btn btn-primary">浏览车型</a>
+                    <a href="#guide" class="btn btn-outline">阅读评测</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Models Section -->
+        <section id="models" class="m-models">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">M系核心车型</h2>
+                    <a href="#" class="view-all">查看完整车系 &rarr;</a>
+                </div>
+                
+                <div class="model-grid">
+                    <!-- M3 -->
+                    <article class="model-card">
+                        <div class="model-image">
+                            <img src="https://picsum.photos/seed/bmw_m3/400/300" alt="宝马M3 Sedan">
+                        </div>
+                        <div class="model-info">
+                            <span class="model-tag">轿车 / 四门</span>
+                            <h3 class="model-title">宝马 M3</h3>
+                            <p class="model-desc">轿车的极致平衡，配备3.0T直列六缸发动机，提供极致的操控与舒适兼顾的驾驶体验。</p>
+                            <div class="model-specs">
+                                <div class="spec-item"><strong>0-100km/h</strong>3.8s</div>
+                                <div class="spec-item"><strong>最大马力</strong>503 hp</div>
+                                <div class="spec-item"><strong>变速箱</strong>8AT</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- M4 -->
+                    <article class="model-card">
+                        <div class="model-image">
+                            <img src="https://picsum.photos/seed/bmw_m4/400/300" alt="宝马M4 Coupe">
+                        </div>
+                        <div class="model-info">
+                            <span class="model-tag">轿跑 / 双门</span>
+                            <h3 class="model-title">宝马 M4</h3>
+                            <p class="model-desc">基于M3打造的双门轿跑，空气动力学套件更激进，专为追求视觉冲击与驾驶激情的用户设计。</p>
+                            <div class="model-specs">
+                                <div class="spec-item"><strong>0-100km/h</strong>3.8s</div>
+                                <div class="spec-item"><strong>最大马力</strong>510 hp</div>
+                                <div class="spec-item"><strong>变速箱</strong>8AT</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- M5 -->
+                    <article class="model-card">
+                        <div class="model-image">
+                            <img src="https://picsum.photos/seed/bmw_m5/400/300" alt="宝马M5 Competition">
+                        </div>
+                        <div class="model-info">
+                            <span class="model-tag">行政 / 轿车</span>
+                            <h3 class="model-title">宝马 M5</h3>
+                            <p class="model-desc">高性能行政轿车代表，插电式混合动力系统，在保证速度的同时维持了极佳的舒适性。</p>
+                            <div class="model-specs">
+                                <div class="spec-item"><strong>0-100km/h</strong>3.5s</div>
+                                <div class="spec-item"><strong>最大马力</strong>625 hp</div>
+                                <div class="spec-item"><strong>动力</strong>混动</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- M8 -->
+                    <article class="model-card">
+                        <div class="model-image">
+                            <img src="https://picsum.photos/seed/bmw_m8/400/300" alt="宝马M8 Coupe">
+                        </div>
+                        <div class="model-info">
+                            <span class="model-tag">超跑 / 双门</span>
+                            <h3 class="model-title">宝马 M8</h3>
+                            <p class="model-desc">M系列的旗舰车型，搭载V8双涡轮增压发动机，拥有顶级的豪华配置与赛道级性能。</p>
+                            <div class="model-specs">
+                                <div class="spec-item"><strong>0-100km/h</strong>3.3s</div>
+                                <div class="spec-item"><strong>最大马力</strong>625 hp</div>
+                                <div class="spec-item"><strong>变速箱</strong>8AT</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Focus -->
+        <section id="performance" class="performance-section">
+            <div class="container performance-content">
+                <div class="perf-text">
+                    <h2>M Power：不仅是速度，更是驾驶者之车</h2>
+                    <p>M系车型在调校上始终坚持“人车合一”的理念。每一颗螺栓的紧固，每一处空气动力的优化，都旨在让驾驶者能直接、纯粹地感受到引擎的咆哮与抓地力的反馈。</p>
+                    <p>从经典的直列六缸发动机到如今的高效V8动力单元，M Power不断突破物理极限。无论是纽博格林北环赛道，还是城市拥堵路段，M系都能提供令人信服的驾驶质感。</p>
+                    
+                    <div class="perf-highlight">
+                        <div class="highlight-item">
+                            <h4>50:50</h4>
+                            <span>完美前后配重</span>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>碳纤维</h4>
+                            <span>轻量化车身应用</span>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>自适应</h4>
+                            <span>M xDrive四驱系统</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="perf-image">
+                    <img src="https://picsum.photos/seed/engine_detail/600/400" alt="M Power引擎特写">
+                </div>
+            </div>
+        </section>
+
+        <!-- Buying Guide -->
+        <section id="guide" class="guide-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">M系选购指南</h2>
+                    <a href="#" class="view-all">更多建议 &rarr;</a>
+                </div>
+
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <div class="guide-icon">1</div>
+                        <h3>确定预算与用途</h3>
+                        <p>评估您的主要用车场景。是日常通勤、周末赛道日还是商务接待？M3 Sedan兼顾实用，M4 Gran Coupe空间更优，而M5则适合需要速度与舒适并存的用户。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">2</div>
+                        <h3>动力总成选择</h3>
+                        <p>关注发动机版本。S58发动机是M3/M4的经典直列六缸，动力充沛且可靠。如果您追求极致性能，M8 Competition搭载的S68 V8发动机提供了更狂暴的体验。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">3</div>
+                        <h3>二手车评估要点</h3>
+                        <p>购买二手M系需重点检查发动机机脚胶、刹车系统磨损情况以及底盘是否有事故痕迹。M车型高转速发动机对保养要求较高，建议选择专业渠道。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container faq-container">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题解答</h2>
+                </div>
+
+                <details>
+                    <summary>M系和普通宝马有什么区别？</summary>
+                    <div class="faq-content">
+                        M系是宝马的子品牌，代表高性能车型。与普通车型相比，M系拥有独立的底盘调校、专属的空气动力学套件、更坚固的悬挂系统以及由宝马高性能部门调校的发动机，提供了远超普通车型的动力与操控性能。
+                    </div>
+                </details>
+
+                <details>
+                    <summary>M xDrive四驱系统会影响驾驶乐趣吗？</summary>
+                    <div class="faq-content">
+                        现代M xDrive系统在大多数情况下以后驱模式为主，仅在打滑或需要牵引力时介入。它提供了极佳的稳定性，尤其是在雨天或弯道中，能显著提升行车安全性，同时保留M车型核心的驾驶乐趣。
+                    </div>
+                </details>
+
+                <details>
+                    <summary>M系列车型的保养成本高吗？</summary>
+                    <div class="faq-content">
+                        M系列作为高性能车，其保养成本确实高于普通宝马。主要涉及更高规格的机油、刹车片/盘的消耗较快以及轮胎磨损。建议在购买前了解当地的M车型保养费用及配件供应情况。
+                    </div>
+                </details>
+
+                <details>
+                    <summary>新手可以直接驾驶M系吗？</summary>
+                    <div class="faq-content">
+                        虽然M系拥有牵引力控制等安全辅助系统，但其动力储备巨大（起步即推背），刹车响应也更为灵敏。建议新手在充分了解车辆特性、熟悉各项电子辅助功能后，在安全场地内进行练习。
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="color:white; margin-bottom:1rem; display:block;">M<span>Power</span></a>
+                    <p>专注于M系汽车资讯、评测与改装指南，为高性能车爱好者提供专业的内容服务。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>车型导航</h4>
+                    <ul>
+                        <li><a href="#">M3</a></li>
+                        <li><a href="#">M4</a></li>
+                        <li><a href="#">M5</a></li>
+                        <li><a href="#">M8</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源中心</h4>
+                    <ul>
+                        <li><a href="#">维修手册</a></li>
+                        <li><a href="#">改装案例</a></li>
+                        <li><a href="#">配件商城</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">投稿合作</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">广告服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 M Power 汽车资讯网. All rights reserved. 本站内容仅供学习参考，不作为购车依据。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById('mainNav');
+            nav.classList.toggle('open');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                var targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                var targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    var nav = document.getElementById('mainNav');
+                    if (nav.classList.contains('open')) {
+                        nav.classList.remove('open');
+                    }
+                    
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+                              </html>
